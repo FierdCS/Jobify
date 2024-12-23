@@ -13,9 +13,9 @@ export default function LoginScreen() {
 
     return (
         <View style={styles.container}>
-            <VideoView 
-                style={styles.video} 
-                player={player} 
+            <VideoView
+                style={styles.video}
+                player={player}
                 contentFit="cover"
                 nativeControls={false}
                 disableGesture={true}
@@ -29,22 +29,22 @@ export default function LoginScreen() {
                     {/* Sign-in Buttons */}
                     <View style={styles.buttonContainer}>
                         <TouchableOpacity style={styles.button}>
-                            <Image 
+                            <Image
                                 source={require('../../../assets/google.png')}
                                 style={styles.logo}
                             />
                             <Text style={styles.buttonText}>Sign in with Google</Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.button}>
-                            <Image 
-                                source={require('../../../assets/facebook.png')} 
+                            <Image
+                                source={require('../../../assets/facebook.png')}
                                 style={styles.logo}
                             />
                             <Text style={styles.buttonText}>Sign in with Facebook</Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.button}>
-                            <Image 
-                                source={require('../../../assets/email.png')} 
+                            <Image
+                                source={require('../../../assets/email.png')}
                                 style={styles.logo}
                             />
                             <Text style={styles.buttonText}>Sign in with Email</Text>
@@ -53,7 +53,7 @@ export default function LoginScreen() {
                 </View>
 
                 <View style={styles.footer}>
-                    <Text style={styles.copyrightText}>© 2024. All rights reserved.</Text>
+                    <Text style={styles.copyrightText}>© 2024 Jobify, Inc. All rights reserved.</Text>
                 </View>
             </View>
         </View>
@@ -108,13 +108,14 @@ const styles = StyleSheet.create({
     logo: {
         width: 24,
         height: 24,
-        marginRight: 10,
+        marginRight: 0,
     },
     buttonText: {
         fontFamily: 'outfit-bold',
         color: Colors.BLACK,
         fontSize: 16,
-        textAlign: 'center',
+        textAlign: 'center', // Centers text horizontally within its container
+        flex: 1, // Allows the text to take up available space and centers relative to siblings
     },
     footer: {
         width: '100%',
