@@ -22,30 +22,30 @@ export default function LoginScreen() {
                 disableControls={true} // Ensures no native controls are shown
             />
             <View style={styles.textContainer}>
-                <Text style={styles.titleText}>Jobifyy </Text>
+                <Text style={styles.titleText}>Jobify </Text>
                 <Text style={styles.subtitleText}>Ultimate place to explore your potential</Text>
 
                 {/* Sign-in Buttons */}
                 <View style={styles.buttonContainer}>
                     <TouchableOpacity style={styles.button}>
-                        {/* <Image 
-                            source={require('../../../assets/google-logo.png')} 
+                        <Image 
+                            source={require('../../../assets/google.png')}
                             style={styles.logo}
-                        /> */}
+                        />
                         <Text style={styles.buttonText}>Sign in with Google</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.button}>
-                        {/* <Image 
-                            source={require('../../assets/facebook-logo.png')} 
+                        <Image 
+                            source={require('../../../assets/facebook.png')} 
                             style={styles.logo}
-                        /> */}
+                        />
                         <Text style={styles.buttonText}>Sign in with Facebook</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.button}>
-                        {/* <Image 
-                            source={require('../../assets/email-logo.png')} 
+                        <Image 
+                            source={require('../../../assets/email.png')} 
                             style={styles.logo}
-                        /> */}
+                        />
                         <Text style={styles.buttonText}>Sign in with Email</Text>
                     </TouchableOpacity>
                 </View>
