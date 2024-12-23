@@ -97,6 +97,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
         borderRadius: 8,
         marginBottom: 10,
+        backgroundColor: Colors.WHITE
     },
     logo: {
         width: 24,
@@ -105,7 +106,7 @@ const styles = StyleSheet.create({
     },
     buttonText: {
         fontFamily: 'outfit-bold',
-        color: Colors.WHITE,
+        color: Colors.BLACK,
         fontSize: 16,
         textAlign: 'center',
     },
