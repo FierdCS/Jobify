@@ -22,7 +22,7 @@ export default function LoginScreen() {
                 disableControls={true} // Ensures no native controls are shown
             />
             <View style={styles.textContainer}>
-                <Text style={styles.titleText}>Jobify </Text>
+                <Text style={styles.titleText}>Jobifyy </Text>
                 <Text style={styles.subtitleText}>Ultimate place to explore your potential</Text>
 
                 {/* Sign-in Buttons */}
