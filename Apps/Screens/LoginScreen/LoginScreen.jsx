@@ -24,7 +24,7 @@ export default function LoginScreen() {
             <View style={styles.contentContainer}>
                 <View style={styles.textContainer}>
                     <Text style={styles.titleText}>Jobify </Text>
-                    <Text style={styles.subtitleText}>Ultimate place to explore your potential</Text>
+                    <Text style={styles.subtitleText}>The Ultimate place to fulfill your potential</Text>
 
                     {/* Sign-in Buttons */}
                     <View style={styles.buttonContainer}>
