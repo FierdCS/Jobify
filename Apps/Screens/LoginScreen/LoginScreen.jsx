@@ -3,7 +3,7 @@ import React from 'react';
 import { useVideoPlayer, VideoView } from 'expo-video';
 import Colors from '../../Utils/Colors';
 
-const videoSource = 'https://cdn.pixabay.com/video/2024/11/07/240330_large.mp4';
+const videoSource = 'https://videos.pexels.com/video-files/6774385/6774385-uhd_1440_2560_30fps.mp4';
 
 export default function LoginScreen() {
     const player = useVideoPlayer(videoSource, player => {
@@ -28,26 +28,26 @@ export default function LoginScreen() {
 
                     {/* Sign-in Buttons */}
                     <View style={styles.buttonContainer}>
-                        <TouchableOpacity style={styles.button}>
+                        <TouchableOpacity style={styles.button} onPress={()=>console.log('Email Login')}>
+                            <Image
+                                source={require('../../../assets/email.png')}
+                                style={styles.logo}
+                            />
+                            <Text style={styles.buttonText}>Sign in with Email</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.button} onPress={()=>console.log('Google Login')}>
                             <Image
                                 source={require('../../../assets/google.png')}
                                 style={styles.logo}
                             />
                             <Text style={styles.buttonText}>Sign in with Google</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.button}>
+                        <TouchableOpacity style={styles.button} onPress={()=>console.log('Facebook Login')}>
                             <Image
                                 source={require('../../../assets/facebook.png')}
                                 style={styles.logo}
                             />
                             <Text style={styles.buttonText}>Sign in with Facebook</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity style={styles.button}>
-                            <Image
-                                source={require('../../../assets/email.png')}
-                                style={styles.logo}
-                            />
-                            <Text style={styles.buttonText}>Sign in with Email</Text>
                         </TouchableOpacity>
                     </View>
                 </View>
@@ -93,29 +93,31 @@ const styles = StyleSheet.create({
         marginBottom: 20,
     },
     buttonContainer: {
-        width: '80%',
-        marginTop: 10,
+        width: '60%',
+        marginTop: 250,
     },
     button: {
         flexDirection: 'row',
         alignItems: 'center',
-        paddingVertical: 15,
-        paddingHorizontal: 20,
+        paddingVertical: 10, // Remove vertical padding to condense the height
+        paddingHorizontal: 10, // Minimal horizontal padding between logo and text
         borderRadius: 8,
         marginBottom: 10,
-        backgroundColor: Colors.WHITE
+        backgroundColor: Colors.WHITE,
+        justifyContent: 'flex-start', // Align items to the left, no extra space
+        width: 'auto', // Auto width to fit content (logo + text)
     },
     logo: {
         width: 24,
         height: 24,
-        marginRight: 0,
+        marginRight: 8, // Small space between the logo and text
     },
     buttonText: {
         fontFamily: 'outfit-bold',
         color: Colors.BLACK,
         fontSize: 16,
-        textAlign: 'center', // Centers text horizontally within its container
-        flex: 1, // Allows the text to take up available space and centers relative to siblings
+        textAlign: 'left', // Align text to the left
+        marginLeft: 10, // Small gap between the logo and text (remove flex: 1)
     },
     footer: {
         width: '100%',
