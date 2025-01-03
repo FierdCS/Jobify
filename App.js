@@ -4,6 +4,7 @@ import { useFonts } from 'expo-font';
 import LoginScreen from './Apps/Screens/LoginScreen/LoginScreen';
 import { ClerkProvider, SignedIn, SignedOut } from '@clerk/clerk-expo';
 import HomeScreen from './Apps/Screens/HomeScreen'
+import { SafeAreaView } from 'react-native-safe-area-context';
 export default function App() {
   const [loaded, error] = useFonts({
     outfit: require("./assets/fonts/Outfit-Regular.ttf"),
@@ -15,7 +16,10 @@ export default function App() {
     <ClerkProvider publishableKey={process.env.EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY}>
       <View style={styles.container}>
         <SignedIn>
-          <Text>You are Signed In</Text>
+          <SafeAreaView>
+          <HomeScreen />
+          </SafeAreaView>
+          
         </SignedIn>
         <SignedOut>
           <LoginScreen />
