@@ -16,9 +16,7 @@ export default function App() {
     <ClerkProvider publishableKey={process.env.EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY}>
       <View style={styles.container}>
         <SignedIn>
-          <SafeAreaView>
           <HomeScreen />
-          </SafeAreaView>
           
         </SignedIn>
         <SignedOut>
