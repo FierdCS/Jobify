@@ -11,9 +11,15 @@ export default function App() {
     "outfit-bold": require("./assets/fonts/Outfit-Bold.ttf"),
   });
   return (
+
     <ClerkProvider publishableKey={process.env.EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY}>
       <View style={styles.container}>
-        <LoginScreen />
+        <SignedIn>
+          <Text>You are Signed In</Text>
+        </SignedIn>
+        <SignedOut>
+          <LoginScreen />
+        </SignedOut>
       </View>
     </ClerkProvider>
 

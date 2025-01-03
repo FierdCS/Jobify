@@ -13,7 +13,7 @@ const videoSource = 'https://videos.pexels.com/video-files/6774385/6774385-uhd_1
 WebBrowser.maybeCompleteAuthSession();
 
 export default function LoginScreen() {
-    const { signIn, isLoaded } = useSignIn();
+    const { signIn, isLoaded, setActive } = useSignIn();
     const router = useRouter();
 
     const player = useVideoPlayer(videoSource, player => {
